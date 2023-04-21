@@ -10,7 +10,7 @@
 
 var taskInput=document.getElementById("new-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.getElementById("in-complete-tasks");//ul of #incompleteTasks
+var incompleteTaskHolder=document.getElementById("in-complete-tasks");//ul of #in-complete-Tasks
 var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
 
 
@@ -86,7 +86,7 @@ var editTask=function(){
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".edit");
     var containsClass=listItem.classList.contains("edit-mode");
-    //If class of the parent is .editmode
+    //If class of the parent is .edit-mode
     if(containsClass){
 
         //switch to .edit-mode
@@ -98,7 +98,7 @@ var editTask=function(){
         editBtn.innerText="Save";
     }
 
-    //toggle .editmode on the parent.
+    //toggle .edit-mode on the parent.
     listItem.classList.toggle("edit-mode");
 };
 
@@ -131,7 +131,7 @@ var taskIncomplete=function(){
     console.log("Incomplete Task...");
 //Mark task as incomplete.
     //When the checkbox is unchecked
-    //Append the task list item to the #incomplete-tasks.
+    //Append the task list item to the #in-complete-tasks.
     var listItem=this.parentNode;
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
